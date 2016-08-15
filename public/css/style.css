@@ -1,0 +1,50 @@
+section{
+	margin-top: 51px;
+	text-align: center;
+}
+
+.margin{
+	margin: 10px;
+	top: 30px;
+}
+
+.block-day{
+	display: block;
+}
+
+.color-bakc{
+	padding: 5px;
+	background-color: #BDBDBD;
+	text-decoration: none;
+}
+
+.color-bakc:hover{
+	text-decoration: none;
+}
+
+.completed li{
+	background-color:#1f5648;
+	color:#fff;
+}
+
+.completed li:nth-of-type(2n+0){
+	background-color: #243a56;
+}
+
+.list-group-item{
+	border: 0px;
+}
+
+#noTasks{
+	display: block;
+}
+
+.btn{
+	padding: 6px 4px;
+}
+
+@media (max-width: 768px) { 
+   .form-group a,input{
+   	margin: 10px;
+   }
+}

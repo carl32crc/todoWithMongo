@@ -1,0 +1,10 @@
+extend layout
+
+block body2
+	section
+		div.row
+			h1= title
+			ul.completed.list-group
+				- each comp, i in completed
+							li.list-group-item
+								s #{ comp.name } - #{ comp.day }

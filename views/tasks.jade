@@ -1,0 +1,22 @@
+extend layout
+
+block body2
+	section
+		h1= title
+		p You have #{ tasks.length } tasks created
+		div.alertRemove
+		form.form-group(action="/tasks", method="POST")
+			div.row
+				div.col-lg-1.col-md-2.col-sm-3
+					a.completed.btn.btn-default.btn-success(href="/tasks") Done All
+				div.col-lg-10.col-md-8.col-sm-5
+						input.form-control(type="text",name="name",required, placeholder="Write your task...")
+				div.col-lg-1.col-md-2.col-sm-3
+					input.btn.btn-default.btn-info(type="submit",value="Add Task")
+			div.row
+				each task, i in tasks
+					div.btn-group.btn-group-justified.margin
+						a.btn-group.tasks.btn.btn-danger(href="/tasks?id=#{ task._id }") Remove
+						a.btn-group.color-bakc #{ task.id } - #{ task.name } 
+							strong.block-day #{task.day}
+						a.btn-group.completed.btn.btn-success(href="/tasks?id=#{ task._id }") Done

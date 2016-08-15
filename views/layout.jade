@@ -1,0 +1,25 @@
+doctype html
+html
+	head
+		title tasksDemo
+		link(rel="stylesheet", href="/css/bootstrap.min.css")
+		link(rel="stylesheet", href="/css/style.css")
+
+	body
+		div.container
+			header
+				nav.navbar.navbar-inverse.navbar-fixed-top
+					div.container
+						div.navbar-header
+								a.navbar-brand(href="#") Project Name
+							div#navbar.collapse.navbar-collapse
+								ul.nav.navbar-nav
+									li
+										a(href="/tasks") List Tasks
+									li
+										a(href="/completed") Completed
+		div.container
+			block body2
+
+			script(src="https://code.jquery.com/jquery-2.2.4.js")
+			script(src="/js/main.js")
